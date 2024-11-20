@@ -6,7 +6,7 @@ import './App.css'
 
 import WebApp from '@twa-dev/sdk'
 
-function App() {
+export default () => {
   const [count, setCount] = useState(0)
 
   return (
@@ -37,5 +37,3 @@ function App() {
     </>
   )
 }
-
-export default App

@@ -1,14 +1,14 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
 import './index.css'
-
+import App from './App'
 import WebApp from '@twa-dev/sdk'
+import throwExpression from './util/throwExpression';
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client'
 
 WebApp.ready();
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
+createRoot(document.getElementById('root') ?? throwExpression('no root')).render(
+  <StrictMode>
     <App />
-  </React.StrictMode>,
+  </StrictMode>,
 )
